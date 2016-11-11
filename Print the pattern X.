@@ -1,0 +1,30 @@
+class PrintX
+{
+   public static void printX(int length)
+   {
+     int startCur = 0;
+     int endCur = length-1;
+     for (int i = 0; i < length; i++)
+      {
+        for (int j = 0; j < length; j++)
+          {
+            if (startCur == endCur && j == i)
+            System.out.print('+');
+            else if (startCur == j || endCur == j)
+            System.out.print('+');
+            else
+            System.out.print(' ');
+          }
+        startCur++;
+        endCur--;
+        System.out.println();
+      }
+
+    }
+
+     public static void main(String args[])
+      {
+         int sizeOfX = 7; // must be odd number
+         printX(sizeOfX);
+      }
+} 
